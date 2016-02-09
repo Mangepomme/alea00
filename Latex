@@ -1,0 +1,324 @@
+\documentclass[a4paper,12pt] {article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{eurosym}
+\usepackage{arydshln}
+\usepackage{makecell}
+\usepackage{tabularx}
+
+\title{Cahier des Charges - Red Pig \\ Alea00}
+\author{Louise FLICK \\ Léo DAVOINE \\ Gabriel DEPOTTE \\ Sébastien GOUBEAU}
+\date\today
+
+\ADLinactivate
+
+\begin{document}
+\maketitle{}
+\setlength{\parindent}{1cm}
+
+\centerline{\includegraphics[width=5cm,height=7cm]{logo-redpig.png}}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\section{Introduction :}
+	A l’origine mus par des centres d’intérêt très disparates, le cinéma et l’image pour certains, les mangas et animes pour d’autres, notre équipe a su se réunir au sein d’un même groupe et autour d’un même projet, Alea00. Si cette union a pu voir le jour, c’est grâce à notre affection commune pour la programmation et le jeu vidéo, mais aussi par notre amitié mutuelle, de longue date pour certains, encore fraîche pour d'autres.
+\\
+\\
+Cependant, comme il a été dit précédemment, nous n’avions pas les mêmes centres d’intérêt, ce qui explique une quantité prodigieuse de désaccords au sein du groupe lorsque nous dûmes choisir le projet. Nous avons commencé par envisager un jeu d’aviation sur le thème des films de Ghibli. Mais ce projet nous a paru dans un premier temps trop difficile à mettre en œuvre. Nous avons alors envisagé énormément d’autres projets : un Super-Smash-Bros-like aléatoire, un jeu de voitures et d’énigmes, et même une bataille de pouces et une méduse avec une mitraillette.
+\\
+\\
+Mais, suites à de nombreux débats et votes sur Facebook et Skype, nous avons décidé d’opter pour l’aviation : un jeu d’adresse et de combats en avion, le tout dans un univers reprenant les éléments créés par les studios Ghibli.
+\\
+\\
+	Ce document a pour rôle de vous présenter Alea00, un jeu de missions aériennes prenant place dans l’univers créé par les studios japonais Ghibli. Il expliquera la composition du groupe, la nature du projet, tant du point de vue artistique que de celui du gameplay, le découpage du projet et la répartition des tâches, ainsi que le planning du semestre. Enfin, une section sera dédiée au budget.
+\\
+\\
+Cette occasion sera excellente pour nous apprendre les différentes tâches de la conception d’un jeu vidéo et les étapes de sa création. De plus, le projet nous apprendra à travailler en équipe de manière efficace sur un sujet commun.
+\clearpage
+
+\section{Genèse du groupe}
+\subsection{Red Pig : Origins}
+A l’origine, Léo et Gabriel se connaissaient depuis le lycée et avaient déjà réalisé plusieurs projets ensemble (exposés, ISN, TPE, projet de Terminale S-SI). Liés par une amitié forte et se sachant mutuellement travailleurs, ils tenaient à faire le projet ensemble.
+\\
+\\
+Gabriel ayant travaillé sur les MOOCs avec Sébastien, il le savait aussi travailleur et appliqué, et tint à faire le projet avec.
+\\
+Enfin, Léo a proposé à Louise de nous rejoindre, qui a rapidement accepté.
+\\
+Le nom Red Pig vient de l’idée autour de laquelle nous nous sommes mis d’accord en premier : un jeu d’aviation prenant place dans l’univers créé par les studios Ghibli. C’est une référence au film Porco Rosso, dont le titre a été passé en anglais. Après beaucoup de propositions de jeux différents, nous en sommes revenus à l’idée principale de jeu d’aviation.
+
+\subsection{Les membres}
+\subsubsection{Léo DAVOINE alias \textit{Kariu}}
+	J'ai toujours été passionné par la découverte : j'adore découvrir des nouvelles choses (sur les sciences, la religion, l'histoire, …) et des nouvelles œuvres (livres, mangas, musique, films, jeux vidéos, …), Je me suis donc orienté vers un métier ou je pourrais découvrir et surtout créer. En effet, ma préférence étant l'heoric fantasy, j'ai cherché un métier qui me permettrait continuellement de créer et découvrir et le milieu du jeu vidéo s'est imposé.
+\\
+\\
+	J'ai donc choisi le chemin qui me permettrait d'aboutir à la création de jeu. Pendant mes trois années de lycée, j'ai fait de la SI afin de découvrir des nouvelles choses (le fonctionnement de plusieurs systèmes et les bases pour en comprendre d'autres) mais également pour commencer l'électronique et les bases de la programmation (en langage algo) afin d'avoir une bonne école post-bac. En terminale, l'option ISN m'a fait découvrir la programmation en général (en java et certains des types abstraits), que j'ai ensuite approfondi avec un club de création de jeu (en c++), ce qui m'a permis de réaliser deux projets très différents et voir que le code m'attirait. J'ai donc choisi l'Epita.
+\\
+\\
+
+\clearpage
+	Le projet de S2 va enfin me permettre de créer quelque chose d’abouti ayant du contenu et de voir le parcours de création d'un jeu depuis l'intérieur. Je vais donc pouvoir faire le premier test pour mon futur métier, qui sera enrichissant pour connaître mes limites ainsi que pour apprendre à déléguer, chose que j'ai du mal à faire.
+\\
+\\
+	Ce projet a donc pour but de me confirmer (ou  infirmer) mon projet de métier mais également de créer un jeu intéressant avec des amis mais également des collègues, et enfin que je puisse réaliser un premier projet complet que je créerai de A à Z.
+
+\subsubsection{Louise FLICK alias \textit{Mangepomme}}
+	Comme beaucoup d'étudiants d'EPITA, j'ai découvert l'informatique à partir des jeux vidéo. Convertie aux joies vidéo ludiques il y a maintenant 4 ans, j'ai très vite été passionnée par ce qu'il se passe derrière le jeu. Comment se fait-il qu'en appuyant sur quatre boutons, le jeu permettait-il autant de choses? C'est à ce moment-là que j'ai découvert la programmation et j'ai vite su que c'était ce que je voulais faire plus tard.
+\\
+\\
+	Le projet de ce second semestre m'a tout de suite enchantée. J'imaginais déjà la multitude de possibilités qui nous étaient offertes. Apres un long moment à errer entre les groupes, j'ai rejoint Red Pig, un groupe d'amis et de bosseurs.
+\\
+\\
+	Ce projet me permettra de découvrir la création d'un projet complet, des premières lignes de codes jusqu'à la com du jeu, en passant par les graphismes.
+
+\subsubsection{Gabriel DEPOTTE alias \textit{Jojo Palambas}}
+	Personnellement, j’ai toujours adoré créer. J’ai commencé assez tôt (au début du collège) par tourner des petits courts-métrages, seul ou avec des amis, filmé ou en image par image, en vitesse réelle ou au ralenti. A ce moment, j’avais déjà commencé à programmer un jeu sur flash, avec l’aide de mon père.
+\\
+Mais c’est en arrivant au lycée que tout s’est accéléré, avec l’obtention de mon premier outil programmable, ma calculatrice. Mon grand frère m’avait déjà ébloui en codant un programme sur sa calculatrice permettant de calculer sa moyenne au bac (ce que je trouvais fabuleux), mais il ne m’a fallu que deux mois pour dépasser son niveau et créer mes propres aventures textuelles sur calculatrice, dont les gens de ma classe me demandaient sans cesse des suites.
+\\
+Je me suis mis rapidement à y passer des soirées entières, à coder tout et n’importe quoi, jusqu’à la classe de Terminale où j’ai pris ISN en spécialité. Mon projet, que j’ai réalisé notamment avec Léo, consistait en un simulateur de la célèbre théorie de l’évolution de Darwin.
+\\
+Enfin, ce projet de S2 sera pour moi sans doute le projet le plus épanouissant auquel j’aurai participé : il m’apprendra non seulement à gérer un projet considérable, mais aussi à travailler en équipe, collaborer, et respecter un planning et un ordre de travail fixes.
+
+
+\subsubsection{Sébastien GOUBEAU alias \textit{La Taupe Espa$\tilde{n}$ol}}
+	J’ai eu la chance d’avoir eu très jeune, un ordinateur ce qui m’a permis de m’intéresser à l’informatique très tôt. Au début je jouais dessus et très vite j’ai eu envie de me balader dans les paramètres de Windows ou de mon navigateur. De fil en aiguille j’ai fini par découvrir ce qui était caché derrière les pages web (html, css, javascript), et cela m’a donc ouvert la porte de la programmation. Au début je ne me suis intéressé qu’aux langages web interprétés (html, css, javascript, php, sql) jusqu’à m’intéresser finalement aux langages compilés. Et depuis j’ai toujours programmé en C et C++. La mécanique de réflexion que m’a apporté la programmation m’a beaucoup aidé dans le domaine mathématique et cela a clairement été un avantage au lycée.
+\\
+\\
+Le C\# ressemble beaucoup au C++ donc je n’ai pas été trop dépaysé. En revanche il y a une chose que je n’ai jamais faite et qui va représenter un défi pour moi, c’est de programmer en équipe. Tous mes projets, je les ai réalisées seul mais cette fois nous allons devoir trouver une méthode de coopération qui nous permettra d’être efficace et de produire un code sans bug. Je suis très impatient d’expérimenter ce nouveau fonctionnement avec mon groupe de projet.
+
+
+
+\subsection{Nature du projet}
+	Alea00 serait un jeu qui aurait de multiples facettes : parfois combat, parfois courses, parfois jeu d’adresse, le tout en contrôlant à chaque fois un engin volant.
+Tout l’attrait du jeu se fera par la multitude d’engins volants à disposition du joueur : Stables, rapides, blindés, légers, volant, lévitant, etc. ; et par la variété de missions qu’il aura à offrir : détruire, poursuivre, esquiver, survivre, fuir, dérober, etc..
+
+
+\section{Le projet}
+\subsection{Le scénario}
+	Au milieu de guerres sans fin faisant rage dans le monde, un groupe d'individu se faisant appelé prophètes d'Irseth arrivèrent doté d’une invention révolutionnaire: l'Alea00. Ce système permet de convertir la magie en énergie. Doté d'armes futuristes, les prophètes d'Irseth prirent possession d'une grande partie du continent et instaurèrent l'empire d'Irseth avec, à sa tête, la Grande Impératrice.
+\\
+\\
+L’empire d’Irseth prospère grâce à leur géniale découverte, à tel point que tout le monde oublia comment celui-ci était apparu. Deux siècles plus tard, toute la population d'Irseth utilise l’Aléa00.
+\\
+\\
+Au beau milieu de la campagne d’Eskeos, un jeune pilote agricole d’indicatif "Razgriz" fait son premier vol agricole.  A son retour, il survole sa ville natale, qui est en flamme. Tentant de sauver un maximum avec son appareil, il voit le feu dévorer sa maison, sa grange, se répandre dans ses champs. De retour au sol, il apprend que l'empire déclare la guerre à sa région, Eskeos. Forcé de battre en retraite face à l'énorme force de l'empire, un groupe de survivants va se réfugier dans le désert de Veilian sous les conseils du héros. Depuis le début de son vol, il entend une mystérieuse voix qui le conseille.
+\\
+\\
+Toujours conseillé par cette voix, les résistants fraîchement nommés "les Gueux" vont demander l'asile à une tribu nomade équipée de l’Alea00. Avec l'aide de la tribu nomade, les résistants repoussent leurs poursuivants grâce aux talents de Razgriz qui se fait surnommer à présent le démon de Geitlan. Ils reprennent peu à peu du terrain sur Irseth. Ils y eu une guerre atroce, comme pendant des guerres d’antan. En avançant à travers les terres, les gueux réunissent des survivants des différentes régions pour former une véritable armée dirigée par Razgriz, le démon de Geitlan. Les gueux prennent finalement d'assaut la capitale et Razgriz fait finalement face à la Grande Impératrice dans les cieux du domaine impérial. Une fois abattue, les Gueux ainsi que Razgriz pénètrent dans le palais impérial pour y découvrir l'Impératrice mourante. Depuis le début, elle guidait Razgriz vers elle. Epuisée par le temps, elle avait été détrônée par son Grand Conseiller, celui-ci voulant le contrôle total et absolu sur l’ensemble d’Irseth. En voyant arriver les sauveurs de son empire, elle lâche un dernier soupir soulagé et s’éteint.
+
+\subsection{Le type}
+	Alea00 est donc un jeu d'avion qui contient une partie d'aléatoire comme l'indique son nom. Ce fut un long débat avant de se décider. Nous avons finalement opté pour ce type de jeu, pour sa diversité de gameplay possible, et pour sa liberté en termes de création.
+\\
+\\
+	Le jeu aura comme la majorité des jeux d'avion une vue à la troisième personne. Nous essaierons de proposer plusieurs modes de jeu selon les missions : destruction d'ennemis, escorte de transporteurs, ou même fuite impliquant des esquives d'ennemis et d'obstacles.
+
+\subsection{Contexte et environnement}
+	Pour notre projet, nous avons voulu nous inspirer d’un univers fantastique qui plaisait à tout le groupe : les films Ghibli et ceux de Miyasaki. Même si plusieurs de ses films ont été fait dans le cadre du studio Ghibli nous voulions aussi pouvoir exploiter l’univers de ses autres films.
+\\
+\\
+	Cependant, nous ne voulions pas reprendre trait pour trait ces films d’animation, déjà parce qu’ils sont en animation 2D mais aussi parce que nous voulions ajouter nos créations personnelles.
+\\
+\\
+	En restant dans le thème, nous pensons varier les décors, en plein air, haut dans le ciel pour les phases de combat, et pour la poursuite, un décor plus complet, plus rempli tels une grotte ou une ville.
+
+\subsection{Intérêts}
+Premièrement, ce projet de deuxième semestre va permettre à tout ce groupe d’apprendre à travailler en équipe sur un seul et même programme. C’est la raison pour laquelle nous avons décidé de créer un jeu et non un autre type de logiciels : en effet, il fallait que le projet motive chacun de nous. Ayant des centres d’intérêt assez séparés les uns des autres, nous devions coller à une passion que nous avions en commun : le jeu vidéo. Avec un projet qui nous intéresse tous, nous sommes plus aptes à travailler dans la direction.
+\\
+Mais ce projet nous apprendra aussi à mener à bien un projet complexe, à déterminer l’ordre optimal des tâches et à bien s’organiser.
+\\
+Enfin, et évidemment, il nous apprendra diverses techniques de programmation, et d’organisation, comme le débugage efficace.
+\\
+Chacune des aptitudes citées précédemment nous seront utiles en tant qu’ingénieurs.
+\\
+Ensuite, on peut être amené à se demander pourquoi avoir choisi un jeu d’aviation dans l’univers Ghibli.
+\\
+Tout d’abord, nous souhaitions faire autre chose qu’un jeu de guerre ou un survival, afin de nous démarquer des projets des années précédentes : le thème de l’aviation nous a rapidement inspirés pour le projet.
+\\
+Mais pourquoi l’univers Ghibli ? Tout d’abord, cet univers, par l’utilisation de la magie, permet une plus grande liberté de modèles d’engins volants : tout peut voler, même les engins aux formes les plus improbables. Mais tout univers magique permet cela. Le choix de l’univers Ghibli en particulier, s’est fait car il intéresse beaucoup de jeunes, et reflète la culture japonaise, très appréciée en France. En effet, rares sont les adolescents n’ayant jamais vu un seul film d’Hayao Miyazaki, ou des studios Ghibli en général.
+
+\section{Découpage du projet}
+\subsection{Unity}
+Le gameplay d’Alea00 étant par essence en trois dimensions, il nous faut travailler sur un logiciel qui permet de créer la notion de 3D dans le projet.
+\\
+Unity est un logiciel qui permet de développer des jeux, des logiciels ou des application en utilisant de la 3D. C’est un logiciel qui supporte le langage C\#, avec quel nous nous sommes de plus en plus familiarisés grâce aux travaux pratiques de programmation.
+\\
+Unity possède de bonnes facultés graphiques qui nous permettront de rendre au mieux l’aspect graphique que nous souhaitons à notre jeu : une immersion maximale dans l’univers steampunk et magique des films Ghibli. De plus, Unity gère bien les particules, ce qui nous permettra d’ajouter une touche de photoréalisme aux projectiles et aux moteurs.
+\\
+Enfin, ce logiciel nous aidera à créer des jeux de caméra complexes qui collent au maximum à la manipulation des avions, d’un point de vue de troisième personne.
+\clearpage
+
+\subsection{Le gameplay}
+\subsubsection{Véhicule du joueur}
+	Le joueur contrôlera donc un avion, qu’il pourra choisir. Il pourra donc tourner dans quatre directions (haut, bas, gauche, droite). Il pourra évidement avancer en réglant sa vitesse, avec une accélération et une décélération.
+\\
+\\
+	L’avion aura une barre de vie qui diminuera à chaque coup reçu. Cependant, si l’avion rentre dans un autre, les deux véhicules perdront instantanément toute leur vie et se crasheront. Le joueur a une barre de carburant magique rechargeable pour réguler les accélérations de l’avion.
+\\
+\\
+	Quant au système de combat, qui dit avion dit combat à distance, avec un système de tirs, qui consommerait aussi du carburant magique (en effet tirer depuis un avion n’est pas sans demande d’énergie.
+\\
+\\
+	Pour apporter un peu de diversité au jeu, nous proposerons plusieurs types d’avion : un véhicule équilibré, ni trop bon ni pas assez, un avion plus rapide, mais moins de vie, un gros avec de la vie et du carburant mais plus lent et moins maniable. Ce ne sont que des exemples, et nous espérons proposer un maximum de diversité.
+\\
+\\
+\subsubsection{Ennemis}
+	Les ennemis seront également dans la plupart des missions des pilotes d’avion. Ils se dirigeront vers le joueur en l’attaquant. Eux aussi auront une limite de carburant pour éviter un tir et une accélération continus sur le joueur. Ils s’arrêteront à une certaine distance du joueur cependant, hormis peut-être des ennemis kamikaze.
+\\
+\\
+	Nous imaginions également des ennemis un peu plus fantastiques, dans le style des ômus dans Nausicaä de la vallée du vent (film de Miyasaki). 
+\clearpage
+
+\subsection{L’intelligence artificielle}
+	L’intelligence artificielle est une discipline consistant à reproduire la réflexion d’un être par un algorithme. On dégage deux types d’intelligences artificielles : l’IA forte, qui n’en est qu’au stade théorique, est capable de faire un raisonnement entier et de choisir par elle-même. L’IA faible, utilisée dans tous les jeux, reproduit une mince partie de la pensée en attribuant une réponse précise à un problème précis par le biais de calculs et algorithmes. Elle ne réfléchit pas d’elle-même, mais réagit comme on l’a programmé pour réagir.
+\\
+Ce sera sans nul doute une des parties les plus complexes à coder.
+\\
+Tout d’abord, il s’agira de programmer un algorithme de pathfinding pour les avions adverses, afin que ces derniers puissent aller d’un point A à un point B en contournant les obstacles. Fort heureusement, Unity possède déjà un algorithme de pathfinding en 2D. Notre rôle sera donc d'utiliser ce dernier pour un créer un en 3D.
+\\
+Mais il s’agira aussi de programmer subtilement la difficulté des ennemis. Si ces derniers touchent dès qu’ils tirent, le jeu perdra de sa saveur. De même, se battre contre des chasseurs aveugles a peu d’intérêt. Notre rôle sera de jauger entre ces deux extrêmes et de programmer un comportement ni parfait, ni idiot, pour les IA.
+
+\subsection{Le son}
+Pour la musique, nous allons allier des styles différents pour s’adapter au mieux aux situations. L’univers de Ghibli ayant une esthétique parfois très steampunk, l’idée de base serait d’aller piocher dans des morceaux classiques, baroques, ou modernes (mais pas contemporains).
+\\
+Pour les parties les plus lentes, il peut être judicieux de choisir des musiques lentes et contemplatives, jouées à l’orchestre symphonique par exemple, ou par des instruments à cordes frottées (violon, alto, violoncelle, contrebasse, viole, vielle à roue).
+\\
+Pour les parties d’action (poursuites, batailles), un instrument au son clair jouant rapidement peut être préférable. Nous pouvons par exemple penser au piano ou à la guitare.
+\\
+Mais le son d’un jeu, ce n’est pas que sa musique : c’est aussi les effets sonores qu’il utilise. Pour les effets sonores, le site sound-fishing.net, dont nous allons payer un abonnement de six mois, est une excellente banque de sons.
+
+\subsection{Le site web}
+	Un site web est un avantage certain pour la communication et la présentation d’Alea00. Il permettra de montrer l’avancement du projet ainsi que de télécharger les rapports de soutenances et le cahier des charges.
+\\
+\\
+Il sera aussi possible de télécharger une version alpha du jeu dès qu’il sera jouable.
+
+\subsection{Le réseau}
+	Pour améliorer encore l’expérience du joueur sur Aléa00, un mode multijoueurs sera disponible. Il est en effet toujours plus drôle de jouer entre amis que seul.
+\\
+\\
+Comme sur la partie solo, nous voudrions proposer deux modes de jeu. Le premier serait un combat classique en multijoueur, en 1vs1 ou en équipes. Le second serait une coopération, et le but serait d’escorter un avion de transport et de le défendre contre des IA ou une autre équipe de joueur.
+
+\clearpage
+
+\section{Repartition des tâches}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabularx}{11cm}{|X|| c| c| c| c|}
+  \hline
+  \textbf{Répartition} & Léo          & Louise       & Sébastien    & Gabriel      \\
+	\Xhline{1pt}
+  Gameplay             & $\checkmark$ &              &              & $\checkmark$ \\
+  \hline
+  IA                   & $\checkmark$ &              &              & $\checkmark$ \\
+	\hline
+	Graphismes           &              & $\checkmark$ & $\checkmark$ &              \\
+	\hline
+	Sons                 &              &              & $\checkmark$ & $\checkmark$ \\
+	\hline
+	Multijoueurs         & $\checkmark$ & $\checkmark$ &              &              \\
+	\hline
+	Site Internet        &              & $\checkmark$ & $\checkmark$ &              \\
+	\hline
+	Level Designe        &              & $\checkmark$ & $\checkmark$ &              \\
+	\hline
+	Interface            & $\checkmark$ &              &              & $\checkmark$ \\
+	\hline
+\end{tabularx}
+
+\section{Planning}
+Légende de progression :\\
+25\%  : $\bigstar$ \\
+50\%  : $\bigstar$ $\bigstar$ \\
+75\%  : $\bigstar$ $\bigstar$ $\bigstar$ \\
+100\% : $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+\subsection{Soutenances}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|l|| l| l| l|}
+  \hline
+	Progression   & 1\iere{} Soutenance & 2\ieme{} Soutenance   & 3\ieme{} Soutenance   \\
+  \Xhline{1pt}
+  Gameplay      & $\bigstar$          & $\bigstar$ $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+  \hline
+  IA            & $\bigstar$          & $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Graphismes    & $\bigstar$          & $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Sons          & $\bigstar$          & $\bigstar$ $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Multijoueurs  &                     & $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Site Internet & $\bigstar$          & $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Level Designe & $\bigstar$          & $\bigstar$ $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+	Interface     & $\bigstar$          & $\bigstar$ $\bigstar$ $\bigstar$ & $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ \\
+	\hline
+\end{tabular}
+
+\clearpage
+
+\section{Budget}
+\subsection{Hardware}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|c| l| l| l| r| r|}
+  \hline
+   \footnotesize{Nom} & \footnotesize{Marque} & \footnotesize{CPU} & \footnotesize{GPU} & \footnotesize{RAM} & \footnotesize{Prix}       \\
+	\Xhline{1pt}
+  \footnotesize{Louise} & \footnotesize{Asus} & \footnotesize{Intel Core i3} & \footnotesize{Intel HD Graphics} & \footnotesize{4Go} & \footnotesize{529\euro}  \\
+  \hline
+  \footnotesize{Sébastien} & \footnotesize{Dell} & \footnotesize{Intel Pentium \scriptsize{N3700}} & \footnotesize{Intel HD Graphics} & \footnotesize{4Go} & \footnotesize{350\euro}  \\
+	\hline
+	\footnotesize{Gabriel} & \footnotesize{Asus} & \footnotesize{Intel Core i7} & \footnotesize{Nvidia GTX 770M} & \footnotesize{24Go} & \footnotesize{1600\euro} \\
+	\hline
+	\footnotesize{Léo} & \footnotesize{Toshiba} & \footnotesize{Intel Celeron \scriptsize{N2820}} & \footnotesize{Intel HD Graphics} & \footnotesize{4Go} & \footnotesize{350\euro}  \\
+	\hline
+\end{tabular}
+
+
+\subsection{Software}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|l| l| r|}
+  \hline
+	Logiciel           & Utilisation                    & Prix          \\
+	\Xhline{1pt}
+  Unity              & Création de jeux               & 0\euro        \\
+	Visual studio 2015 & Éditeur de code                & 0\euro        \\
+	Texlive            & Traitement de texte            & 0\euro        \\
+	Blender            & Modélisation                   & 0\euro        \\
+	Audacity           & Éditeur audio                  & 0\euro        \\
+	Audition           & Éditeur audio avancé           & 24 $\times$ 6 = 144\euro \\
+	Soundfishing       & Banque de sons                 & 18\euro       \\
+	GitHub             & Plate-forme de partage         & 0\euro        \\
+	Paint.NET          & Éditeur d'images               & 0\euro        \\
+	PaintTool SAI      & Éditeur d'images               & 0\euro        \\
+	\Xhline{1pt}
+	\multicolumn{2}{|r|}{\textbf{Total}} & \textbf{162\euro} \\
+	\hline
+\end{tabular}
+
+
+\subsection{Hébergement Web}
+
+Hébergement du site web et nom de domaine $\thicksim$ 3,59 $\times$ 6 = 21,54\euro
+
+
+\section{Conclusion :}
+	Avec ce cahier des charges, tous les paramètres sont fixés et nous pouvons nous atteler à la réalisation de notre projet. Cette première réelle expérience de travail en commun nous aideras à savoir travailler en groupe sur le même code mais également à respecter nos deadlines, ce qui nous sera, à coup sur, utile pour la poursuite de nos études ainsi que pour nos future emplois.
+\\
+\\
+	Finalement, ce premier projet totalement choisi et réalisé par nos soins nous permettra de comprendre et appréhender le processus de création et enfin d'en apprendre plus sur nous-mêmes. 
+
+
+\end{document}
