@@ -9,14 +9,28 @@ public class PlanePilot : MonoBehaviour {
     float boostSpeedMax = 100.0f;                                                                   //vitesse max que peut faire atteindre le boost
     float maneuverability = 1.0f;
 
+    public static Vector3 PlanLastPosition; //Position de l'avion a la dernière frame 
+    public static Vector3 PlanDirection; //Direction de l'avion
+    public float timer = 0;
+
 	// Use this for initialization
 	void Start () {
         Debug.Log("plane pilot script added to : " + gameObject.name);                              //permet de tester que le script est bien chargé par unity
-	
+        PlanLastPosition = this.transform.position; //On init la position de l'avion
+        PlanDirection = new Vector3(0, 0, 0); //Valeur par def de la direction
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        //Mise a jours de la position de l'avion et de sa direction
+        Debug.Log(timer);
+        if (Time.time - timer >= 1f)
+        {
+            PlanDirection = this.transform.position - PlanLastPosition;
+            PlanLastPosition = this.transform.position;
+            timer = Time.time;
+        }
 
         float bias = 0.90f;
         
