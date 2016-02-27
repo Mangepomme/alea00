@@ -4,23 +4,30 @@ using System.Collections.Generic;
 
 public class Tire : MonoBehaviour {
 
-    public KeyCode TrigerKey = KeyCode.Space;
-    public GameObject bullet;
+    public KeyCode TrigerKey = KeyCode.Space; // Touche pour tirer
+    public GameObject bullet; // Gameobject de la balle
+    public float timer = 0; // Banal timer
+    public float cadence = 0.5f; // Cadence de tir (intervale entre 2 tir)
 
     // Use this for initialization
     void Start ()
     {
         Debug.Log("Tire initialisé");
+        timer = Time.time; // Initialisation du timer
 
     }
 	
 	// Update is called once per frame
 	void FixedUpdate()
     {
-        if (Input.GetKey(TrigerKey))
+        if (Input.GetKey(TrigerKey)) // Si la touche de tir a était appuyé
         {
-            Debug.Log("Tire Effectué");
-            Instantiate(bullet, transform.position, transform.rotation);
+            if (Time.time - timer >= cadence) // Si le temps entre 2 tir est respecté
+            {
+                Debug.Log("Tire Effectué");
+                timer = Time.time; // On modifi le timer pour le prochain tir
+                Instantiate(bullet, transform.position, transform.rotation); // On instantie la balle
+            }
         }
     }
 }
