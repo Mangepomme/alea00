@@ -8,13 +8,16 @@ public class PlanePilot : MonoBehaviour {
     float boost = 30.0f;
     float boostSpeedMax = 100.0f;                                                                   //vitesse max que peut faire atteindre le boost
     float maneuverability = 1.0f;
+    public int team;
     
     public float timer = 0;
 
     // Use this for initialization
     void Start()
     {
-        Debug.Log("plane pilot script added to : " + gameObject.name);                              //permet de tester que le script est bien chargé par unity
+        Debug.Log("plane pilot script added to : " + gameObject.name); //permet de tester que le script est bien chargé par unity
+        team = 1;
+        GameObject.Find("Mitraillette").transform.GetComponent<Tire>().team = team;
     }
 	
 	// Update is called once per frame

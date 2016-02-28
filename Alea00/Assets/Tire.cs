@@ -8,14 +8,14 @@ public class Tire : MonoBehaviour {
     public GameObject bullet; // Gameobject de la balle
     public float timer = 0; // Banal timer
     public float cadence = 0.5f; // Cadence de tir (intervale entre 2 tir)
-    public static int team;
+    public int team; // Equipe de la balle
 
     // Use this for initialization
     void Start ()
     {
         Debug.Log("Tire initialisé");
         timer = Time.time; // Initialisation du timer
-        team = 1;
+        team = 0;
 
     }
 	
@@ -28,6 +28,9 @@ public class Tire : MonoBehaviour {
             {
                 timer = Time.time; // On modifi le timer pour le prochain tir
                 Instantiate(bullet, transform.position, transform.rotation); // On instantie la balle
+                bullet.transform.GetComponent<MoveBullet>().team = team; // On initialise l'equipe de la balle
+
+                Debug.Log("Tire tire team : " + team.ToString());
             }
         }
     }
