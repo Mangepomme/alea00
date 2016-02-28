@@ -8,12 +8,14 @@ public class Tire : MonoBehaviour {
     public GameObject bullet; // Gameobject de la balle
     public float timer = 0; // Banal timer
     public float cadence = 0.5f; // Cadence de tir (intervale entre 2 tir)
+    public static int team;
 
     // Use this for initialization
     void Start ()
     {
         Debug.Log("Tire initialisé");
         timer = Time.time; // Initialisation du timer
+        team = 1;
 
     }
 	
@@ -24,7 +26,6 @@ public class Tire : MonoBehaviour {
         {
             if (Time.time - timer >= cadence) // Si le temps entre 2 tir est respecté
             {
-                Debug.Log("Tire Effectué");
                 timer = Time.time; // On modifi le timer pour le prochain tir
                 Instantiate(bullet, transform.position, transform.rotation); // On instantie la balle
             }
