@@ -4,11 +4,11 @@ using System.Collections;
 public class IA_Plan : MonoBehaviour {
 
     float speed = 30f;
-    float speedMax = 150.0f;
-    float speedMin = 10.0f;
-    float boost = 30.0f;
-    float boostSpeedMax = 100.0f;                                                                   //vitesse max que peut faire atteindre le boost
-    float maneuverability = 1.0f;
+    //float speedMax = 150.0f;
+    //float speedMin = 10.0f;
+    //float boost = 30.0f;
+    //float boostSpeedMax = 100.0f;                                                                   //vitesse max que peut faire atteindre le boost
+    //float maneuverability = 1.0f;
 
     public float timer = 0;
 
