@@ -1,0 +1,129 @@
+header
+{
+	margin-bottom: 25px;
+}
+
+#logo
+{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	font-size: 2em;
+}
+
+#home
+{
+	margin: 5px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#quote
+{
+	text-align: right;
+	position: absolute;
+	right: 25px;
+	top: 100px;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+#summary
+{
+	border: 3px rgb(170,170,170) double;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	list-style: none;
+}
+
+#summary ul
+{
+	margin : 0;
+	padding: 0;
+	list-style: none;
+}
+
+#summary li
+{
+	padding-right: 15%;
+	display: inline-block;
+	font-size: 1.3em;
+	font-family: Georgia, serif;
+}
+
+#summary ul li
+{
+	display: inherit;
+	font-size: 0.8em;
+	padding: 0px;
+	margin: 5px;
+	margin-left: 0px;
+}
+
+#summary ul
+{
+	position: absolute;
+	left: -999em;
+	text-align: left;
+	z-index: 1000;
+}
+
+#summary li:hover ul
+{
+	left: auto;
+}
+
+#side
+{
+	width: 11%;
+	height: 250px;
+	float: left;
+	border: 3px rgb(170,170,170) double;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+section
+{
+	float: right;
+	width: 85%;
+}
+
+article, footer
+{
+	border: 3px rgb(170,170,170) double;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	text-align: justify;
+}
+
+footer
+{
+	width: 97%;
+	float: bottom;
+	display: inline-block;
+}
+
+footer div
+{
+	display: inline-block;
+	margin-right: 25%;
+}
+
+
+
+
+
+
+
+
+
+
