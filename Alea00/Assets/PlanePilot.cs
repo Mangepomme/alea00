@@ -62,11 +62,11 @@ public class PlanePilot : MonoBehaviour {
 
         if(terrainHeightWhereWeAre > transform.position.y)                                          //si l'avion est sous le terrain
         {
-                                                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
+            Destroy(gameObject);                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
 
-            transform.position = new Vector3(transform.position.x,
+            /*transform.position = new Vector3(transform.position.x,
                                                 terrainHeightWhereWeAre,
-                                                transform.position.z) ;
+                                                transform.position.z) ;*/
         }
 	}
 }
