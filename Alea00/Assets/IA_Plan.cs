@@ -67,4 +67,11 @@ public class IA_Plan : MonoBehaviour {
                                                 transform.position.z);*/
         }
     }
+
+    void OnTriggerStay(Collider obj)
+    {
+        Destroy(obj.gameObject);
+        Destroy(this.gameObject);
+        // A ajouter un effet d'explosion ici
+    }
 }
