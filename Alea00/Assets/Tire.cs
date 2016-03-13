@@ -33,5 +33,12 @@ public class Tire : MonoBehaviour {
                 Debug.Log("Tire tire team : " + team.ToString());
             }
         }
+
+        float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
+
+        if (terrainHeightWhereWeAre > transform.position.y) //si la balle touche le sol
+        {
+            Destroy(gameObject);
+        }  
     }
 }

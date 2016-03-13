@@ -64,9 +64,18 @@ public class PlanePilot : MonoBehaviour {
         {
             Destroy(gameObject);                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
 
+            Application.LoadLevel("GameOver");
             /*transform.position = new Vector3(transform.position.x,
                                                 terrainHeightWhereWeAre,
                                                 transform.position.z) ;*/
-        }
+        }        
 	}
+
+    void OnTriggerStay(Collider obj)
+    {
+        Destroy(this.gameObject);
+        // A ajouter un effet d'explosion ici
+
+        Application.LoadLevel("GameOver");
+    }
 }

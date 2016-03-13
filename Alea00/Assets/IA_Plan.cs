@@ -70,8 +70,9 @@ public class IA_Plan : MonoBehaviour {
 
     void OnTriggerStay(Collider obj)
     {
-        Destroy(obj.gameObject);
         Destroy(this.gameObject);
         // A ajouter un effet d'explosion ici
+
+        Application.LoadLevel("GameOver");
     }
 }
