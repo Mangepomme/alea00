@@ -18,10 +18,14 @@ public class Loader : MonoBehaviour {
         Application.Quit();
     }
 
-    public void load_scene1()
+    public void load_sologame()
     {
+        Debug.Log("load solo");
         Application.LoadLevel("SoloGame");
     }
 
-
+    public void load_menu()
+    {
+        Application.LoadLevel("MainMenu");
+    }
 }

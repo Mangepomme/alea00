@@ -40,6 +40,5 @@ public class IA_Plan : MonoBehaviour {
         Destroy(this.gameObject);
         // A ajouter un effet d'explosion ici
 
-        Application.LoadLevel("GameOver");
     }
 }
