@@ -31,7 +31,8 @@ public class IA_Plan : MonoBehaviour {
 
         if (terrainHeightWhereWeAre > transform.position.y)                                          //si l'avion est sous le terrain
         {
-            Destroy(gameObject);                                                                     //ajouter ici les pbs de l'avion en cas de collision avec le sol
+            Destroy(gameObject);
+            Global.enemiesleft--;                                                                    //utiliser pour la victoire         
         }
     }
 
@@ -40,5 +41,9 @@ public class IA_Plan : MonoBehaviour {
         Destroy(this.gameObject);
         // A ajouter un effet d'explosion ici
 
+        if (obj.gameObject.tag != "player")                                                          //empecher le mode kamikaze
+        {
+            Global.enemiesleft--;                                                                    //utiliser pour la victoire
+        }
     }
 }

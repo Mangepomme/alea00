@@ -10,7 +10,7 @@ public class Global : MonoBehaviour {
     public float timer;
     public float delaySpawn = 3f;
     public bool tem = true;
-    public int enemiesleft;
+    public static int enemiesleft = 1; //a modifier en fonction du niveau (faire des if sur le niveau)
 
     // Use this for initialization
     void Start ()
@@ -28,16 +28,7 @@ public class Global : MonoBehaviour {
             tem = false;
         }
 
-        bool enemyspawn = false; 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
-        enemiesleft = enemies.Length;
-
-        if (enemiesleft > 0)
-        {
-            enemyspawn = true;
-        }
-
-        if (enemiesleft == 0 && enemyspawn)
+        if (enemiesleft == 0)
         {
             Application.LoadLevel("Win");
         }
