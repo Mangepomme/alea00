@@ -26,9 +26,7 @@ public class PlanePilot : MonoBehaviour {
         float bias = 0.90f;
         
         Vector3 moveCamTo = transform.position - transform.forward * 10.0f + Vector3.up * 5.0f;   //gestion de la camera : camera stable
-        //Vector3 moveCamTo = transform.position - transform.forward * 10.0f + transform.up * 5.0f;   //gestion de la camera : camera partiellement subjective
 
-        //Camera.main.transform.position = moveCamTo;
         Camera.main.transform.position = Camera.main.transform.position * bias + (1.0f - bias) * moveCamTo;     //bias = ralentissement de la camera (entre 0 et 1) : 0.96 ou 0.70 ou 0.50
         Camera.main.transform.LookAt(transform.position + transform.forward * 30.0f);               //le "+ transform.forward * xf" sert a pointer la camera non pas vers l'avion mais vers ou il va
                                                                                                     //pour la camera subjective, enlever les 3 lignes et mettre Main Camera dans PlaneWhole
@@ -65,9 +63,6 @@ public class PlanePilot : MonoBehaviour {
             Destroy(gameObject);                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
 
             Application.LoadLevel("GameOver");
-            /*transform.position = new Vector3(transform.position.x,
-                                                terrainHeightWhereWeAre,
-                                                transform.position.z) ;*/
         }        
 	}
 
