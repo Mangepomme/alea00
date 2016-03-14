@@ -58,11 +58,13 @@ public class PlanePilot : MonoBehaviour {
 
         float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);     //hauteur du terrain sous l'avion
 
-        if(terrainHeightWhereWeAre > transform.position.y)                                          //si l'avion est sous le terrain
+        if(terrainHeightWhereWeAre > transform.position.y
+            || transform.position.x < 0 || transform.position.z < 0
+            || transform.position.x > 3000 || transform.position.z > 3000)                                          //si l'avion est sous le terrain ou dépasse les limites
         {
             Destroy(gameObject);                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
 
-            Application.LoadLevel("GameOver");
+            Application.LoadLevel("GameOver") ;
         }        
 	}
 
