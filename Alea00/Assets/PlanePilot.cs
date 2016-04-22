@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class PlanePilot : MonoBehaviour {
-    float speed = 60.0f;
-    float speedMax = 150.0f;
-    float speedMin = 10.0f;
-    float boost = 30.0f;
-    float boostSpeedMax = 100.0f;                                                                   //vitesse max que peut faire atteindre le boost
-    float maneuverability = 1.0f;
+    public float speed;
+    public float speedMax;
+    public float speedMin;
+    public float boost;
+    public float boostSpeedMax;                                                                   //vitesse max que peut faire atteindre le boost
+    public float maneuverability;
     public int team;
     
     public float timer = 0;
@@ -73,6 +73,6 @@ public class PlanePilot : MonoBehaviour {
         Destroy(this.gameObject);
         // A ajouter un effet d'explosion ici
 
-        Application.LoadLevel("GameOver");
+        Application.LoadLevel("GameOver") ;
     }
 }
