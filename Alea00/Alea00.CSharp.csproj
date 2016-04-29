@@ -68,7 +68,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Gate.cs" />
     <Compile Include="Assets\Global.cs" />
+    <Compile Include="Assets\GlobalRace.cs" />
     <Compile Include="Assets\IA_Plan.cs" />
     <Compile Include="Assets\Loader.cs" />
     <Compile Include="Assets\MenuCam.cs" />

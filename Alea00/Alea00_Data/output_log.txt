@@ -16,7 +16,7 @@ Platform assembly: E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\U
 Loading E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.287 seconds
+- Completed reload, in  0.592 seconds
 Platform assembly: E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Données\Programmes\C#\Alea00\Alea00\Alea00_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0

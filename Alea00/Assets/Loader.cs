@@ -24,6 +24,12 @@ public class Loader : MonoBehaviour {
         Application.LoadLevel("SoloGame");
     }
 
+    public void load_racemode()
+    {
+        Debug.Log("load race");
+        Application.LoadLevel("RaceMode") ;
+    }
+
     public void load_menu()
     {
         Application.LoadLevel("MainMenu");

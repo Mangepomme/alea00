@@ -9,6 +9,7 @@ public class PlanePilot : MonoBehaviour {
     public float boostSpeedMax;                                                                   //vitesse max que peut faire atteindre le boost
     public float maneuverability;
     public int team;
+    public string mode;
     
     public float timer = 0;
 
@@ -60,7 +61,8 @@ public class PlanePilot : MonoBehaviour {
 
         if(terrainHeightWhereWeAre > transform.position.y
             || transform.position.x < 0 || transform.position.z < 0
-            || transform.position.x > 3000 || transform.position.z > 3000)                                          //si l'avion est sous le terrain ou dépasse les limites
+            || transform.position.x > 3000 || transform.position.z > 3000
+            || transform.position.y < 0 || transform.position.y > 1000)                                          //si l'avion est sous le terrain ou dépasse les limites
         {
             Destroy(gameObject);                                                                    //ajouter ici les pbs de l'avion en cas de collision avec le sol
 
@@ -70,9 +72,11 @@ public class PlanePilot : MonoBehaviour {
 
     void OnTriggerStay(Collider obj)
     {
-        Destroy(this.gameObject);
-        // A ajouter un effet d'explosion ici
-
-        Application.LoadLevel("GameOver") ;
+        if(obj.gameObject.tag != "gate")
+        {
+            Destroy(this.gameObject);
+            // A ajouter un effet d'explosion ici
+            Application.LoadLevel("GameOver");
+        }
     }
 }

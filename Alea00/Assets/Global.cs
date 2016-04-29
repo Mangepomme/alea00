@@ -21,7 +21,7 @@ public class Global : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        enemiesleft = 3;
+        enemiesleft = 3 ;
         enemiescheck = enemiesleft;
         timer = Time.time;
         Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
