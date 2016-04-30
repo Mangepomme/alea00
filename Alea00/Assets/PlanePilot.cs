@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class PlanePilot : MonoBehaviour {
+public class PlanePilot : MonoBehaviour
+{
     public float speed;
     public float speedMax;
     public float speedMin;
@@ -9,9 +11,22 @@ public class PlanePilot : MonoBehaviour {
     public float boostSpeedMax;                                                                   //vitesse max que peut faire atteindre le boost
     public float maneuverability;
     public int team;
-    public string mode;
-    
+
     public float timer = 0;
+
+    // Style de texte (style de vitesse et altitude)
+    public GUIStyle styleText;
+    public Texture Compteur;
+
+    void OnGUI()
+    {
+        //Compteur
+        GUI.DrawTexture(new Rect(0, Screen.height - 130, 130, 130), Compteur);
+        // Vitesse
+        GUI.TextArea(new Rect(10, Screen.height - 60, 100, 100), ((int)speed).ToString() + " km/h", styleText);
+        // Altitude
+        GUI.TextArea(new Rect(10, Screen.height - 30, 100, 100), ((int)(transform.position.y - Terrain.activeTerrain.SampleHeight(transform.position))).ToString() + " m", styleText);
+    }
 
     // Use this for initialization
     void Start()
