@@ -17,7 +17,7 @@ public class Gate : MonoBehaviour {
     {
         if (obj.gameObject.tag == "player")
         {
-            GlobalRace.gatesleft--;
+            GlobalRace.gatesleft-- ;
             Destroy(this.gameObject);
         }
     }

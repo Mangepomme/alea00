@@ -6,25 +6,56 @@ using System.Collections.Generic;
 public class Global : MonoBehaviour {
 
     public GameObject Plan;
+    public GameObject Fighter;
+    public GameObject Battleship;
+    public GameObject Sprinter;
+    public GameObject Prototype;
     public GameObject IA_Plan1;
     public GameObject IA_Plan2;
     public GameObject IA_Plan3;
     public float timer;
     public float delaySpawn = 3f;
-    public static int enemiesleft; //a modifier en fonction du niveau (faire des if sur le niveau)
+    public static int enemiesleft;
     public int enemiescheck;
 
     public bool summon1;
     public bool summon2;
     public bool summon3;
 
+    public string planetype;
+
     // Use this for initialization
     void Start ()
     {
+        PlayerPrefs.SetString("Level", "fight");
+
+        planetype = PlayerPrefs.GetString("PlaneType");
+
         enemiesleft = 3 ;
         enemiescheck = enemiesleft;
         timer = Time.time;
-        Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
+
+        if(planetype == "Prototype")
+        {
+            Plan = Prototype;
+            Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
+        }
+        else if (planetype == "Battleship")
+        {
+            Plan = Battleship;
+            Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
+        }
+        else if (planetype == "Sprinter")
+        {
+            Plan = Sprinter;
+            Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
+        }
+        else
+        {
+            Plan = Fighter;
+            Instantiate(Plan, transform.position, new Quaternion(0, 0, 0, 0)); // On instantie l'avion
+        }
+
         summon1 = true;
         summon2 = false;
         summon3 = false;
@@ -33,6 +64,9 @@ public class Global : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+
+
+
         Vector3 pos = transform.position - transform.forward * 30.0f;
 
         enemiescheck = enemiesleft;
