@@ -1,3 +1,11 @@
+html
+{
+	background-image: url("images/bg.jpg");
+	background-attachment: fixed;
+	background-repeat : no-repeat;
+	background-size : cover;
+}
+
 header
 {
 	margin-bottom: 25px;
@@ -77,6 +85,7 @@ a
 #summary li:hover ul
 {
 	left: auto;
+	background-color : rgba(255,255,255,0.5);
 }
 
 #side
@@ -100,9 +109,14 @@ article, footer
 {
 	border: 3px rgb(170,170,170) double;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 20px;
 	margin: 10px;
 	text-align: justify;
+}
+
+article a
+{
+	text-decoration : underline;
 }
 
 footer
@@ -115,11 +129,21 @@ footer
 footer div
 {
 	display: inline-block;
-	margin-right: 25%;
+	margin-right: 15%;
+	float : left;
 }
 
+#logogrp
+{
+	display: inline-block;
+	margin-right: 0%;
+	float : right;
+}
 
-
+#summary, article, footer, #side
+{
+	background-color: rgba(255,255,255,0.5);
+}
 
 
 
