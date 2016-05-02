@@ -96,7 +96,7 @@ public class Global : MonoBehaviour {
 
         if (enemiesleft == 0)
         {
-            Application.LoadLevel("Win");
+            Application.LoadLevel("Win") ;
         }
     }
 }

@@ -39,6 +39,6 @@ public class Tire : MonoBehaviour {
         if (terrainHeightWhereWeAre > transform.position.y) //si la balle touche le sol
         {
             Destroy(gameObject);
-        }  
+        }   
     }
 }

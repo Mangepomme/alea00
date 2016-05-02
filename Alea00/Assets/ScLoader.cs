@@ -47,5 +47,12 @@ public class ScLoader : MonoBehaviour {
         PlayerPrefs.SetString("PlaneType", planetype);
         Debug.Log("load menu");
         Application.LoadLevel("MainMenu");
+    } 
+
+    public void load_multi()
+    {
+        PlayerPrefs.SetString("PlaneType", planetype);
+        Debug.Log("load multi");
+        Application.LoadLevel("MultiTest");
     }
 }
