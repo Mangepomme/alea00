@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 51a29cc21acf63d4ea450949a0a24b48
+timeCreated: 1466435043
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Plan: {fileID: 106370, guid: a1854c5e6bb7de241b5926e45efb6251, type: 2}
+  - Gate: {fileID: 149212, guid: 4692526be27bd6941b8d059543450d1c, type: 2}
+  - Fighter: {fileID: 106370, guid: a1854c5e6bb7de241b5926e45efb6251, type: 2}
+  - Sprinter: {fileID: 121442, guid: cb52ef66dc94acc44b881ac4c63486ff, type: 2}
+  - SmallConqueror: {fileID: 164870, guid: 3fa9950cf0479f14b902967c4b886040, type: 2}
+  - Conqueror: {fileID: 164870, guid: 3fa9950cf0479f14b902967c4b886040, type: 2}
+  - Prototype: {fileID: 177018, guid: 617619b634e1daa43ac039ba9df67b81, type: 2}
+  - Hunter: {fileID: 196606, guid: a7331787350bbaf4f9bc5762a39de6e8, type: 2}
+  - Destroyer: {fileID: 196606, guid: a7331787350bbaf4f9bc5762a39de6e8, type: 2}
+  - ChaosSun: {fileID: 196606, guid: a7331787350bbaf4f9bc5762a39de6e8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
