@@ -57,26 +57,24 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ressources\Scripts\AutoTir.cs" />
     <Compile Include="Assets\Ressources\Scripts\EndCamera.cs" />
     <Compile Include="Assets\Ressources\Scripts\Gate.cs" />
     <Compile Include="Assets\Ressources\Scripts\GlobalSolo.cs" />
+    <Compile Include="Assets\Ressources\Scripts\IA_ChaosSun.cs" />
     <Compile Include="Assets\Ressources\Scripts\IA_Plan.cs" />
     <Compile Include="Assets\Ressources\Scripts\Load.cs" />
     <Compile Include="Assets\Ressources\Scripts\MenuCam.cs" />
     <Compile Include="Assets\Ressources\Scripts\MoveBullet.cs" />
     <Compile Include="Assets\Ressources\Scripts\PlanePilot.cs" />
+    <Compile Include="Assets\Ressources\Scripts\PseudoInputScript.cs" />
     <Compile Include="Assets\Ressources\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Ressources\Scripts\SoundLoader.cs" />
     <Compile Include="Assets\Ressources\Scripts\Tire.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
