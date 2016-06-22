@@ -12,6 +12,9 @@ public class PlanePilot : MonoBehaviour
     public float maneuverability;
     public int team;
 
+    public int specialAbilityRate;
+    private int cooldown;
+
     //gestion de la réduction de taille (même si c'est pas la taille qui compte :)
     public float reduce = 30;
 
@@ -46,6 +49,8 @@ public class PlanePilot : MonoBehaviour
     {
         Debug.Log("plane pilot script added to : " + gameObject.name); //permet de tester que le script est bien chargé par unity
         team = 1;
+
+        cooldown = specialAbilityRate;
         //GameObject.Find("Mitraillette").transform.GetComponent<Tire>().team = team;
     }
 	
@@ -97,7 +102,35 @@ public class PlanePilot : MonoBehaviour
 
             PlayerPrefs.SetString("End", "Lose");
             Application.LoadLevel("End");
-        }        
+        }
+
+
+        if(cooldown >= 0)
+        {
+            cooldown--;
+        }
+        else
+        {
+            if(Input.GetAxis("Fire3") > 0)
+            {
+                cooldown = specialAbilityRate;
+
+                int plane = PlayerPrefs.GetInt("Plane");
+
+                if(plane == 1)
+                {
+                    transform.position += 20 * transform.forward;
+                }
+                if(plane == 3)
+                {
+                    transform.Rotate(0, 180, 0);
+                }
+                if(plane == 4)
+                {
+                    transform.position -= 5 * transform.forward;
+                }
+            }
+        }
 	}
 
     void OnTriggerStay(Collider obj)

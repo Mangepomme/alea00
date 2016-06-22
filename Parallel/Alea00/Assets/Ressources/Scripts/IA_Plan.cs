@@ -24,8 +24,8 @@ public class IA_Plan : MonoBehaviour {
         isAlive = true;
         Debug.Log("plane pilot script added to : " + gameObject.name);                              //permet de tester que le script est bien chargé par unity
         timer = 0;
-        cadenceInter1 = 2.0f; // Difficulte normal
-        cadenceInter2 = 8.0f; // Difficulte normal
+        //cadenceInter1 = 2.0f;
+        //cadenceInter2 = 8.0f;
     }
 
     // Update is called once per frame

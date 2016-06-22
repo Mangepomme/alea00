@@ -25,6 +25,9 @@ public class MultiPilot : NetworkBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
+    //Life
+    public int life = 5;
+
     //public float timer = 0;
 
     // Use this for initialization
@@ -87,21 +90,39 @@ public class MultiPilot : NetworkBehaviour
             Application.LoadLevel("End");*/
             if (isLocalPlayer)
             {
-                transform.position = new Vector3(55, 28, 67);
-                speed = 60;
+                life--;
+                if (life > 0)
+                {
+                    transform.position = new Vector3(55, 28, 67);
+                    speed = 60;
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
+                
             }
         }
 
+
+
         //Fire bullet
         if (Input.GetKeyDown(KeyCode.Space))
-            Fire();
+            CmdFire();
     }
 
-    void Fire()
+    [Command]
+    void CmdFire()
     {
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 300 * Time.deltaTime / reduce;
+        NetworkServer.Spawn(bullet);
         Destroy(bullet, 5.0f);
+    }
+
+    public void CollisionBullet()
+    {
+        
     }
     
 }
