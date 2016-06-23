@@ -2,6 +2,7 @@
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MultiPilot : NetworkBehaviour
 {
@@ -26,7 +27,16 @@ public class MultiPilot : NetworkBehaviour
     public Transform bulletSpawn;
 
     //Life
+    [SyncVar]
     public int life = 5;
+
+    //Connections
+    private GameObject[] players;
+    private int connected;
+
+    //Race mode
+    public int nbgatetot = 11;
+    public int nbgatetaken;
 
     //public float timer = 0;
 
@@ -34,6 +44,7 @@ public class MultiPilot : NetworkBehaviour
     void Start ()
     {
         Debug.Log("plane pilot script added to : " + gameObject.name); //permet de tester que le script est bien chargé par unity
+        players = GameObject.FindGameObjectsWithTag("player");
         //team = 1;
     }
 	
@@ -42,6 +53,8 @@ public class MultiPilot : NetworkBehaviour
     {
         if (!isLocalPlayer)
             return;
+
+
 
         float bias = cameraBias;
 
@@ -93,36 +106,82 @@ public class MultiPilot : NetworkBehaviour
                 life--;
                 if (life > 0)
                 {
-                    transform.position = new Vector3(55, 28, 67);
-                    speed = 60;
+                    RpcRespawn();
                 }
                 else
                 {
                     Destroy(this.gameObject);
+                    Camera.main.transform.position = new Vector3(50, 25, 10);
+                    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 0);
                 }
                 
             }
         }
 
-
-
         //Fire bullet
         if (Input.GetKeyDown(KeyCode.Space))
             CmdFire();
+
+        bool end = true;
+        int i = 0;
+        while (i < players.Length && end)
+        {
+            end = players[i].GetComponent<MultiPilot>().life == 0;
+            i++;
+        }
+
+        if (end)
+        {
+            Network.Disconnect();
+            Application.LoadLevel("MultiEnd");
+        }
+        
+        if (GameObject.FindGameObjectsWithTag("gate").Length <= 0)
+        {
+            PlayerPrefs.SetInt("score", nbgatetaken);
+            Network.Disconnect();
+            Application.LoadLevel("MultiEnd");
+        }
+
     }
 
     [Command]
     void CmdFire()
     {
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 300 * Time.deltaTime / reduce;
         NetworkServer.Spawn(bullet);
         Destroy(bullet, 5.0f);
     }
 
     public void CollisionBullet()
     {
-        
+        if (!isServer)
+            return;
+
+        life--;
+        if (life > 0)
+        {
+            RpcRespawn();
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
-    
+
+    [ClientRpc]
+    void RpcRespawn()
+    {
+        if (isLocalPlayer)
+        {
+            transform.position = new Vector3(55, 28, 67);
+            speed = 60;
+        }
+    }
+
+    void OnPlayerConnected()
+    {
+        players = GameObject.FindGameObjectsWithTag("player");
+    }
+
 }

@@ -89,6 +89,18 @@ public class Load : MonoBehaviour {
         Application.LoadLevel("Sologame3");
     }
 
+    public void load_mvs()
+    {
+        setnull();
+        Application.LoadLevel("MultiGame");
+    }
+
+    public void load_mr()
+    {
+        setnull();
+        Application.LoadLevel("MultiRace");
+    }
+
     public void load_next()
     {
         setnull();
